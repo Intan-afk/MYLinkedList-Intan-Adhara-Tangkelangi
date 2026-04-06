@@ -4,12 +4,39 @@
 //jika mau print tambahkan public void linklist
 package mylinkedlist.intan.adhara.tangkelangi;
 
+import java.util.LinkedList;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        LinkedList<Integer> list = new LinkedList<>();
+
+        // Insert at beginning: 20, 10
+        System.out.println("Insert at beginning: 20, 10");
+        list.addFirst(20);
+        list.addFirst(10);
+        System.out.println(list);
+
+        // Insert at end: 30, 40
+        System.out.println("Insert at end: 30, 40");
+        list.addLast(30);
+        list.addLast(40);
+        System.out.println(list);
+
+        System.out.println("Search for 30:");
+        System.out.println(list.contains(30)); // true
+
+
+        System.out.println("Delete 20:");
+        list.remove(Integer.valueOf(20));
+        System.out.println(list);
+
+        
+        System.out.println("Delete 10:");
+        list.remove(Integer.valueOf(10));
+        System.out.println(list);
+
+        System.out.println("Search for 100:");
+        System.out.println(list.contains(100)); // false
     }
 }
